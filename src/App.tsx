@@ -29,7 +29,7 @@ export default function App() {
     verified: true,
     tags: ["#1 TOP Casino"],
     securityUI: true,
-    pwaLink: "https://vk.com/",
+    pwaLink: "https://ida.wake-app.net/Xx8C42kY",
     rating: "4.7",
     shortDescription: intl.formatMessage({ id: "shortDescription" }),
     fullDescription: intl.formatMessage({ id: "fullDescription" }),

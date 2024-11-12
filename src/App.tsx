@@ -152,24 +152,6 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    console.log("useEffect");
-    const handleBeforeInstallPrompt = (e: Event) => {
-      console.log("beforeinstallprompt");
-      const event = e as BeforeInstallPromptEvent;
-      console.log(event);
-    };
-
-    window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
-
-    return () => {
-      window.removeEventListener(
-        "beforeinstallprompt",
-        handleBeforeInstallPrompt
-      );
-    };
-  }, []);
-
-  useEffect(() => {
     if (pwaContent?.pwaLink) {
       setTimeout(() => {
         const searchParams = new URLSearchParams(window.location.search);

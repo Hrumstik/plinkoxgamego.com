@@ -33,7 +33,7 @@ const InstallButton: React.FC<Props> = ({ appLink }) => {
     window.addEventListener(
       "beforeinstallprompt",
       (e: BeforeInstallPromptEvent) => {
-        console.log("beforeinstallprompt fired");
+        e.preventDefault();
         setInstallPrompt(e);
       }
     );
@@ -60,7 +60,7 @@ const InstallButton: React.FC<Props> = ({ appLink }) => {
         console.log("User accepted installation");
         setTimeout(() => {
           dispatch(setInstallState(PWAInstallState.installed));
-        }, 7000);
+        }, 9000);
         if (window.fbq) {
           window.fbq("track", "Lead");
         }
